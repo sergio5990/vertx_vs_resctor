@@ -1,0 +1,36 @@
+plugins {
+    id 'idea'
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.20'
+    id "com.github.johnrengelman.shadow"  version "7.1.2"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.projectreactor.netty:reactor-netty-core:1.1.6'
+    implementation 'io.projectreactor.netty:reactor-netty-http:1.1.6'
+
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.14.2'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.2'
+
+    implementation 'org.postgresql:r2dbc-postgresql:1.0.1.RELEASE'
+    implementation 'io.r2dbc:r2dbc-pool:1.0.0.RELEASE'
+
+    implementation 'org.mongodb:mongodb-driver-reactivestreams:4.9.1'
+
+    implementation 'io.projectreactor:reactor-core:3.5.5'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.4'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.github.sergio5990.rector.netty.AppKt'
+    }
+}
