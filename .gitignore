@@ -1,0 +1,7 @@
+/.idea/**
+/reactor/.gradle/**
+/reactor/.idea/**
+/reactor/build/**
+/vertx/.gradle/**
+/vertx/.idea/**
+/vertx/build/**
